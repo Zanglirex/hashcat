@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F0B836E-2203-4DDF-A4B3-A91E58B24ED3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\Matt\Source\Repos\hashcat\include;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\Matt\Source\Repos\hashcat\include;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\affinity.c" />
+    <ClCompile Include="src\autotune.c" />
+    <ClCompile Include="src\benchmark.c" />
+    <ClCompile Include="src\bitmap.c" />
+    <ClCompile Include="src\bitops.c" />
+    <ClCompile Include="src\combinator.c" />
+    <ClCompile Include="src\common.c" />
+    <ClCompile Include="src\convert.c" />
+    <ClCompile Include="src\cpt.c" />
+    <ClCompile Include="src\cpu_aes.c" />
+    <ClCompile Include="src\cpu_crc32.c" />
+    <ClCompile Include="src\cpu_des.c" />
+    <ClCompile Include="src\cpu_md4.c" />
+    <ClCompile Include="src\cpu_md5.c" />
+    <ClCompile Include="src\cpu_sha1.c" />
+    <ClCompile Include="src\cpu_sha256.c" />
+    <ClCompile Include="src\debugfile.c" />
+    <ClCompile Include="src\dictstat.c" />
+    <ClCompile Include="src\dispatch.c" />
+    <ClCompile Include="src\dynloader.c" />
+    <ClCompile Include="src\event.c" />
+    <ClCompile Include="src\ext_ADL.c" />
+    <ClCompile Include="src\ext_lzma.c" />
+    <ClCompile Include="src\ext_nvapi.c" />
+    <ClCompile Include="src\ext_nvml.c" />
+    <ClCompile Include="src\ext_OpenCL.c" />
+    <ClCompile Include="src\ext_sysfs.c" />
+    <ClCompile Include="src\ext_xnvctrl.c" />
+    <ClCompile Include="src\filehandling.c" />
+    <ClCompile Include="src\folder.c" />
+    <ClCompile Include="src\hashcat.c" />
+    <ClCompile Include="src\hashes.c" />
+    <ClCompile Include="src\hlfmt.c" />
+    <ClCompile Include="src\hwmon.c" />
+    <ClCompile Include="src\induct.c" />
+    <ClCompile Include="src\interface.c" />
+    <ClCompile Include="src\locking.c" />
+    <ClCompile Include="src\logfile.c" />
+    <ClCompile Include="src\loopback.c" />
+    <ClCompile Include="src\lzma_sdk\Alloc.c" />
+    <ClCompile Include="src\lzma_sdk\Lzma2Dec.c" />
+    <ClCompile Include="src\lzma_sdk\LzmaDec.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\memory.c" />
+    <ClCompile Include="src\monitor.c" />
+    <ClCompile Include="src\mpsp.c" />
+    <ClCompile Include="src\opencl.c" />
+    <ClCompile Include="src\outfile.c" />
+    <ClCompile Include="src\outfile_check.c" />
+    <ClCompile Include="src\pidfile.c" />
+    <ClCompile Include="src\potfile.c" />
+    <ClCompile Include="src\restore.c" />
+    <ClCompile Include="src\rp.c" />
+    <ClCompile Include="src\rp_cpu.c" />
+    <ClCompile Include="src\rp_kernel_on_cpu.c" />
+    <ClCompile Include="src\rp_kernel_on_cpu_optimized.c" />
+    <ClCompile Include="src\selftest.c" />
+    <ClCompile Include="src\shared.c" />
+    <ClCompile Include="src\status.c" />
+    <ClCompile Include="src\stdout.c" />
+    <ClCompile Include="src\straight.c" />
+    <ClCompile Include="src\terminal.c" />
+    <ClCompile Include="src\thread.c" />
+    <ClCompile Include="src\timer.c" />
+    <ClCompile Include="src\tuningdb.c" />
+    <ClCompile Include="src\usage.c" />
+    <ClCompile Include="src\user_options.c" />
+    <ClCompile Include="src\wordlist.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deps\opencl-headers\cl\cl.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_d3d10.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_d3d11.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_dx9_media_sharing.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_dx9_media_sharing_intel.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_egl.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_ext.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_ext_intel.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_gl.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_gl_ext.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_platform.h" />
+    <ClInclude Include="deps\opencl-headers\cl\cl_va_api_media_sharing_intel.h" />
+    <ClInclude Include="deps\opencl-headers\cl\opencl.h" />
+    <ClInclude Include="include\affinity.h" />
+    <ClInclude Include="include\autotune.h" />
+    <ClInclude Include="include\benchmark.h" />
+    <ClInclude Include="include\bitmap.h" />
+    <ClInclude Include="include\bitops.h" />
+    <ClInclude Include="include\combinator.h" />
+    <ClInclude Include="include\common.h" />
+    <ClInclude Include="include\convert.h" />
+    <ClInclude Include="include\cpt.h" />
+    <ClInclude Include="include\cpu_aes.h" />
+    <ClInclude Include="include\cpu_blake2.h" />
+    <ClInclude Include="include\cpu_crc32.h" />
+    <ClInclude Include="include\cpu_des.h" />
+    <ClInclude Include="include\cpu_md4.h" />
+    <ClInclude Include="include\cpu_md5.h" />
+    <ClInclude Include="include\cpu_sha1.h" />
+    <ClInclude Include="include\cpu_sha256.h" />
+    <ClInclude Include="include\debugfile.h" />
+    <ClInclude Include="include\dictstat.h" />
+    <ClInclude Include="include\dispatch.h" />
+    <ClInclude Include="include\dynloader.h" />
+    <ClInclude Include="include\event.h" />
+    <ClInclude Include="include\ext_ADL.h" />
+    <ClInclude Include="include\ext_lzma.h" />
+    <ClInclude Include="include\ext_nvapi.h" />
+    <ClInclude Include="include\ext_nvml.h" />
+    <ClInclude Include="include\ext_OpenCL.h" />
+    <ClInclude Include="include\ext_sysfs.h" />
+    <ClInclude Include="include\ext_xnvctrl.h" />
+    <ClInclude Include="include\filehandling.h" />
+    <ClInclude Include="include\folder.h" />
+    <ClInclude Include="include\hashcat.h" />
+    <ClInclude Include="include\hashes.h" />
+    <ClInclude Include="include\hlfmt.h" />
+    <ClInclude Include="include\hwmon.h" />
+    <ClInclude Include="include\induct.h" />
+    <ClInclude Include="include\interface.h" />
+    <ClInclude Include="include\locking.h" />
+    <ClInclude Include="include\logfile.h" />
+    <ClInclude Include="include\loopback.h" />
+    <ClInclude Include="include\lzma_sdk\7zTypes.h" />
+    <ClInclude Include="include\lzma_sdk\Alloc.h" />
+    <ClInclude Include="include\lzma_sdk\Compiler.h" />
+    <ClInclude Include="include\lzma_sdk\Lzma2Dec.h" />
+    <ClInclude Include="include\lzma_sdk\LzmaDec.h" />
+    <ClInclude Include="include\lzma_sdk\Precomp.h" />
+    <ClInclude Include="include\memory.h" />
+    <ClInclude Include="include\monitor.h" />
+    <ClInclude Include="include\mpsp.h" />
+    <ClInclude Include="include\opencl.h" />
+    <ClInclude Include="include\outfile.h" />
+    <ClInclude Include="include\outfile_check.h" />
+    <ClInclude Include="include\pidfile.h" />
+    <ClInclude Include="include\potfile.h" />
+    <ClInclude Include="include\restore.h" />
+    <ClInclude Include="include\rp.h" />
+    <ClInclude Include="include\rp_cpu.h" />
+    <ClInclude Include="include\rp_kernel_on_cpu.h" />
+    <ClInclude Include="include\rp_kernel_on_cpu_optimized.h" />
+    <ClInclude Include="include\selftest.h" />
+    <ClInclude Include="include\shared.h" />
+    <ClInclude Include="include\sort_r.h" />
+    <ClInclude Include="include\status.h" />
+    <ClInclude Include="include\stdout.h" />
+    <ClInclude Include="include\straight.h" />
+    <ClInclude Include="include\terminal.h" />
+    <ClInclude Include="include\thread.h" />
+    <ClInclude Include="include\timer.h" />
+    <ClInclude Include="include\tuningdb.h" />
+    <ClInclude Include="include\types.h" />
+    <ClInclude Include="include\usage.h" />
+    <ClInclude Include="include\user_options.h" />
+    <ClInclude Include="include\wordlist.h" />
+    <ClInclude Include="opencl\inc_hash_constants.h" />
+    <ClInclude Include="opencl\inc_rp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
